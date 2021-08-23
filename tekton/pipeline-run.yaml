@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: nick-app-pipeline-run-
+spec:
+  params:
+    - name: source-repo
+      value: git@github.com:nicholasmorgan/express-sample-app.git
+    - name: image-repo
+      value: quay.io/nicholasmorgan/express-sample-app
+    - name: app-name
+      value: nick-express-sample-app
+  pipelineRef:
+    name: nodejs-pipeline
+  workspaces:
+    - name: pipeline-shared-data
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi

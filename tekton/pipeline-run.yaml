@@ -5,11 +5,11 @@ metadata:
 spec:
   params:
     - name: source-repo
-      value: git@github.com:nicholasmorgan/express-sample-app.git
+      value: git@github.com:cloud-native-garage-method-cohort/nick-morgan-buildah-assignment.git
     - name: image-repo
-      value: quay.io/nicholasmorgan/express-sample-app
+      value: quay.io/nicholasmorgan/sef-study-express
     - name: app-name
-      value: nick-express-sample-app
+      value: nick-sef-study-express
   pipelineRef:
     name: nodejs-pipeline
   workspaces:

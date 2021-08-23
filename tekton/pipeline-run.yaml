@@ -7,7 +7,7 @@ spec:
     - name: source-repo
       value: git@github.com:cloud-native-garage-method-cohort/nick-morgan-buildah-assignment.git
     - name: image-repo
-      value: quay.io/nicholasmorgan/sef-study-express
+      value: quay.io/nicholasmorgan/self-study-express
     - name: app-name
       value: nick-sef-study-express
   pipelineRef:
